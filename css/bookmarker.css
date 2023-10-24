@@ -1,0 +1,135 @@
+/* Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+
+}
+html {
+    scroll-behavior: smooth ;
+}
+body{
+    font-family:'PT Sans Caption', sans-serif; 
+    background-color:#f7ecde ;
+    color:#352e28 ;
+    text-transform: capitalize;
+}
+::selection{
+    background: #fec260;
+}
+ul{
+    list-style: none;
+}
+/* Header */
+h1{
+    font-family:'Pacifico', cursive; 
+    font-size: 3.1rem;
+    font-weight: 500;
+}
+h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    left: 0;
+    bottom: 10px;
+    z-index: -1;
+    background-color: #fec260;
+    transition: .5s;
+}
+h1:hover::after{
+    height: 50%;
+}
+/* Form */
+.input-form {
+    border-width: 2px 0;
+    border-style: dotted;
+    border-color: black;
+}
+h2{
+    font-size: 1.6rem;
+    background: linear-gradient(to right, #3ca55c, #b5ac49 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    font-family: 'Righteous', cursive;
+}
+.input-form label {
+    font-weight: 600;
+}
+.input-form input{
+    font-weight: 300 !important;
+    background-repeat: no-repeat;
+    background-position:right .5rem center;
+    background-size: 1rem;}
+
+
+.input-form .valid {
+    border-Color:green !important;
+background-image:url(../images/valid.svg);
+}
+.input-form .valid:focus{
+      box-shadow:0 0 0 0.25rem rgba(45, 139, 19, 0.25) !important;
+
+}
+.input-form .notvalid {
+    border-Color:red !important;
+background-image:url(../images/notvalid.svg)
+}
+.input-form .notvalid:focus{
+      box-shadow:0 0 0 0.25rem rgba(255, 0, 0, .25) !important;
+
+}
+
+.input-form input:focus{
+    border-color: #fec260;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(254, 194, 96, .25);
+}
+.input-form button{
+    padding: .6rem 2.5rem;
+    background-color:#d1512d ;
+}
+.input-form button:hover{
+    background-color:#bb4120 ;
+}
+/* bookmarker tabel */
+.table > tbody {
+    vertical-align:middle;
+}
+td .visit{
+    background-color:#9eb23b ;
+
+}
+td .visit:hover , td .visit:focus-visible {
+    background-color:#8a9e23 ;
+}
+/* Wrong Entry */
+#wrong-entry{
+    z-index: 999;
+    background-color:rgba(0,0,0,.6);
+    display: none;
+}
+.rules{
+    width: 35%;
+}
+.rules span{
+    width: 20px;
+    height: 20px;
+}
+.rules button{
+    right: 15px;
+    top: 15px;
+}
+.rules h4{
+    font-size: 1.4rem;
+    font-family:'Bree Serif', serif; 
+    color:#352e28 ;
+}
+.rules li {
+    font-size: 1.1rem;
+
+}

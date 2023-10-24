@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="icon" href="./images/bookmark.png">
+    <!-- Css Files-->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bookmarker.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="py-5">
+        <div class="d-flex justify-content-center align-items-center">
+            <h1 class="position-relative py-2">bookmarker</h1>
+        </div>
+    </header>
+    <!-- Input Form -->
+    <section class="form">
+        <div class="container">
+            <div class="input-form py-4">
+
+                <h2 class="mx-auto"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i
+                        class="fa-solid fa-bookmark"></i></h2>
+                    <label for="sitename" class="mb-2"><i class="fa-solid fa-book-bookmark me-2"></i> site name </label>
+                    
+                    <input type="text" class="form-control mb-3" id="sitename"
+                        placeholder="Bookmark Name">
+                    <label for="productprice" class="mb-2"><i class="fa-solid fa-link me-2"></i> site URL </label>
+                   
+                    <input type="text" class="form-control mb-4" id="siteurl" placeholder="Website URL">
+                <button class="btn d-block mx-auto text-white" onclick="addBookmarker()" type="submit">submit</button>
+
+
+            </div>
+        </div>
+
+
+    </section>
+    <!-- Bookmarker tabel-->
+    <section>
+        <div class="container my-4">
+            <table class="table text-center">
+                <thead>
+                    <th>index</th>
+                    <th>website name</th>
+                    <th>visit</th>
+                    <th>delete</th>
+                </thead>
+                <tbody id="tablebody">
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </section>
+    <section>
+        <div id="wrong-entry" class="position-fixed top-0 bottom-0 start-0 end-0">
+            <div id="rules" class="rules bg-white  p-4 rounded top-50 start-50 translate-middle position-relative">
+                <span class="bg-danger rounded-circle me-1 d-inline-block"></span>
+                <span class="bg-warning rounded-circle me-1 d-inline-block"></span>
+                <span class="bg-success rounded-circle d-inline-block"></span>
+                <button id="close" class=" border-0 btn position-absolute">
+                <i class="fa-solid fa-xmark fa-2x"></i></button>
+                <h4 class="mt-4 mb-3">Site Name or Url is not valid, Please follow the rules below :</h4>
+                <ul class="p-0">
+                    <li class="mb-2"><i class="fa-regular fa-circle-right text-danger me-1"></i>Site name must contain at least 3 characters
+                    </li>
+                    <li class="mb-2"><i class="fa-regular fa-circle-right text-danger me-1"></i>Site URL must be a valid one</li>
+                    <li><i class="fa-regular fa-circle-right text-danger me-1"></i>Site  Name And Site URL must be Don't Already Exist</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
